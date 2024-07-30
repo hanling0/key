@@ -1,0 +1,12 @@
+
+jarsigner -verbose -keystore 密钥库位置 -signedjar 签名后的apk 签名前的apk 别名
+注意：给vivo_unsign.apk签名密匙库文件及别名必须要验证的apk一致。否则会导致验证不能通过。
+ 
+例如：
+要对vivo_unsign.apk 文件签名 希望签名后的文件名为 vivo_sign.apk
+ 
+密匙库文件为 d:\keystore\vivo_key.keystore
+别名(Alias)为vivo
+ 
+那么签名的命令为:
+jarsigner -verbose -keystore d:\keystore\vivo_key.keystore -signedjar d:\vivo_sign.apk d:\vivo_unsign.apk  vivo
